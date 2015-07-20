@@ -1,0 +1,15 @@
+button {
+            position:absolute;
+            top:15px;
+            left:15px;
+        }
+        #pos {
+            position:absolute;
+            top:0px;
+            left:160px;
+        }
+        #pos_2{
+            position:absolute;
+            top:0px;
+            left:400px;
+        }

@@ -1,0 +1,243 @@
+/* CSS for the 3-column holy-grail liquid layout. */
+
+/* Styling for non-header elements -------------------------------------------*/
+
+/* selects the body element */
+body {
+    margin:0;
+	padding:0;
+	border:0;				    /* Removes the border around the viewport in old versions of IE */		
+	width:100%;
+	background:#ffffff;	        /* ffffff = black; 000000 = white */	
+	font-size:90%;
+}
+
+#center {                       /* I use this id when I need to center
+    text-align:center;             an element */
+    padding-bottom:15px;
+    display:inline;
+}
+
+/* This allows the footer to have a closed div section */
+
+#supercenter {                   
+    clear:both;
+	float:left;
+	width:100%;
+    border-bottom:1px solid #000000;
+    text-align:center;
+    padding-bottom:15px;
+}
+
+#floatRight {                 /* This is used when an element needs to be floated to the right, it helps to no make it look messy */
+    float:right;
+}
+
+/* selects all the a elements */
+a {
+	color:#336699;
+}
+
+
+
+/* selects all the a elements; applies this styling when mouse is over the a element.*/
+a:hover {
+	color:#ffffff;
+	background:#336699;
+	text-decoration:none;
+}
+
+/* selects h1, h2 and h3 elements */
+h1, h2, h3 {
+	margin:.8em 0 .2em 0;
+	padding:0;
+}
+
+/* selects all the p elements */
+p {
+	margin:.4em 0 .8em 0;
+	padding:0;
+}
+
+/* selects all the img elements */
+img {
+	margin:10px 0 5px;
+}
+
+/* For the advertising div in col3 */
+/* selects img elements that are in an element that has id = ads */
+#ads img {
+	display:block;
+	padding-top:10px;
+}
+
+
+
+/* Header styling ------------------------------------------------------------*/
+
+/* selects the element whose id = header */
+#header {
+	clear:both;
+	float:left;
+	width:100%;
+    border-bottom:1px solid #000000;
+}
+
+/* selects all p, h1, and h2 elements that are in an element whose id = header */
+#header p,
+#header h1,
+#header h2 {
+	padding:.4em 15px 0 15px;
+	margin:0;
+}
+
+/* selects ul elements that are in an element whose id = header */
+#header ul {
+	clear:left;
+	float:left;
+	width:100%;
+	list-style:none;
+	margin:10px 0 0 0;
+	padding:0;
+}
+
+/* selects all li elements that are in an ul element, which is in an element whose id = header */
+#header ul li {
+	display:inline;
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+#padding {
+    padding-bottom:5px;
+    target:blank;
+    
+}
+
+/* selects all a elements that are in an li element, which is in a ul element, 
+   which is in an element whose id = header */
+#header ul li a {
+	display:block;
+	float:left;
+	margin:0 0 0 1px;
+	padding:3px 10px;
+	text-align:center;
+	background:#eeeeee;
+	color:#000000;
+	text-decoration:none;
+	position:relative;
+	left:15px;
+	line-height:1.3em;
+}
+
+/* selects all a elements (when hovered on) that are in an li element, which is in a ul element, 
+   which is in an element whose id = header */
+#header ul li a:hover {
+	background:#336699;
+	color:#ffffff;
+}
+
+/* selects the current link, and selects the current link when the mouse hovers on it.
+   note that 'currentMenu' is a class that we have defined here. */
+#header ul li a.currentMenu,
+#header ul li a.currentMenu:hover {
+    background:#000000;
+	color:#ffffff;
+}
+
+/* Area just below the menubar 
+   selects the element whose id = headerbottom */
+#headerbottom {
+/*	clear:both; */
+	background:#eeeeee;
+	border-top:4px solid #000000;
+	margin:0;
+	padding:10px 20px ;			/* !important means this rule will always be in effect */
+	border-bottom:4px solid #000000;
+
+}
+
+/* End of header styling */
+
+/* Column containers ---------------------------------------------------------*/
+
+/* Each of the next six selectors use the 'left' property. 
+   A positive value for 'left' will move the element to the right of its normal left position.
+   A negative value for 'left' will move the element to the left of its normal left position. */
+   
+/* selects the element which has class = container1 */
+.container1 {
+    background:#eeeeee;		    /* col1 background colour */
+    width:100%;			        /* width of whole page */
+	position:relative;  		/* This fixes the IE7 overflow hidden bug */
+	clear:both;
+	float:left;
+	overflow:hidden;		  	/* This chops off any overhanging divs */	
+}
+
+/* selects the element which has class = container2 */
+.container2 {
+    background:#ffffff;		    /* col2 background colour */    
+    width:100%;			    	/* width of page */  
+    position:relative;    
+	float:left;
+	left:25%;					/* slide container2 to the right, to expose the bkgrd color for col1 */    
+}
+
+/* selects the element which has class = container3 */
+.container3 {
+    background:#eeeeee;		    /* col3 background colour */ 
+    width:100%;			    	/* width of page */ 
+    position:relative;    
+	float:left;
+	left:50%;					/* slide container3 to the right, to expose the bkgrd color for col2 */
+}
+
+/* The three column div's are in the container3 div --------------------------*/
+
+.col1 {						    /* left column */
+	float:left;
+	width:21%;			        /* width of 25%, minus 2% padding on each side */
+	padding:0 2% 1em 2%;	    /* add padding to left, bottom, right */
+	overflow:hidden;
+	position:relative;
+	left:-75%;			        /* slide col1 back to the left, over container1 */
+}
+
+.col2 {						    /* middle column */
+	float:left;
+	width:46%;			        /* width of 50%, minus 2% padding on each side) */
+	padding:0 2% 1em 2%;	    /* add padding to left, bottom, right */
+	overflow:hidden;
+	position:relative;
+	left:-75%;			        /* slide col2 back to the left, over container2 */
+}
+
+.col3 {						    /* right column */
+	float:left;
+	width:21%;			        /* width of 25%, minus 2% 'padding' on each side */
+	padding:0 2% 1em 2%;	    /* add padding to left, bottom, right */
+	overflow:hidden;
+	position:relative;
+	left:-75%;			      	/* slide col3 back to the left, to the left side of container3 */
+}
+
+/* Footer styles -------------------------------------------------------------*/
+
+/* selects the element whose id = footer. */
+#footer {
+	clear:both;
+	float:left;
+	width:100%;
+	border-top:1px solid #000000;
+}
+
+/* selects all paragraphs in the element whose id = footer. */
+#footer p {
+	padding:10px;
+	margin:0;
+}
+
+/* End of styling ------------------------------------------------------------*/
+
