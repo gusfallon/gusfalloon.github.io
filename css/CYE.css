@@ -1,0 +1,82 @@
+#hammerHead {
+    position: absolute;
+    top: 14%;
+    left: 32%;
+    width:80px;
+    height:90px;
+}
+
+.hammerHeadItem {
+	width: 40px;
+	height: 55px;
+}
+
+#grip {
+	position: absolute;
+    top: 12%;
+    left: 11%;
+    width:80px;
+    height:90px;
+}
+.wrapper {
+    background-image: url("../images/city4-1.gif");
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.secondWrapper {
+    background-image: url("../images/city4.gif");
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.thirdWrapper {
+	background-image: url("../images/city4-2.gif");
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.room-1 {
+	background-image: url("../images/room-1.jpg");
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#doorEntry {
+    position: absolute;
+    left: 28.5%;
+    top:40%;
+    width: 150px;
+    height: 200px;
+}
+
+#hud {
+    background-color: gray;
+    position: absolute;
+    left: 300px;
+    top: 550px;
+    padding: 10px;
+}
+
+#hud ul {
+    list-style: none;
+}
+
+#hud ul li {
+    display: inline-block;
+    margin-right: 30px;
+    margin-left: 30px;
+}
