@@ -63,6 +63,11 @@
     height: 200px;
 }
 
+#box {
+    position:absolute;
+    left:38.75%;
+    top:53.57%;
+}
 #hud {
     background-color: gray;
     position: absolute;

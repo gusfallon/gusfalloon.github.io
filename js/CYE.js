@@ -1,15 +1,3 @@
-/*$(document).ready(
-	function() {
-		console.log("ready!");
-	}
-
-);
-
-$(".wrapper").click(
-	function() {
-		alert("This is working!");
-	});*/
-
 $(document).ready(function(){
     $("#hammerHead").click(function(){
         $("#wrapperID").toggleClass("secondWrapper");
@@ -37,16 +25,20 @@ $(document).ready(function(){
         	$("#wrapperID").toggleClass("thirdWrapper");
         	$("#wrapperID").toggleClass("secondWrapper");
         	var door = document.createElement("div");
-         	door.className += "doorEntry";
          	door.setAttribute("id", "doorEntry");
-        	var element = document.getElementById("wrapperID");
-        	element.appendChild(door);
+        	var wrapperID = document.getElementById("wrapperID");
+        	wrapperID.appendChild(door);
         	$("#doorEntry").click(function() {
     	    $("#wrapperID").toggleClass("room-1");
-		    $("#wrapperID").toggleClass("thirdWrapper");
+		      $("#wrapperID").toggleClass("thirdWrapper");
+          var box = document.createElement("img");
+          box.setAttribute("src", "images/box.png");
+          box.setAttribute("id", "box");
+          wrapperID.appendChild(box);
 	});
         }
 	});
+
 	
 });
 
